@@ -1,0 +1,30 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "css-build": "node-sass --omit-source-map-url sass/style.scss public/stylesheets/style.css",
+    "css-watch": "npm run css-build -- --watch"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "axios": "^0.23.0",
+    "cookie-parser": "~1.4.4",
+    "country-code-lookup": "0.0.19",
+    "currency-codes": "^2.1.0",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "md5": "^2.3.0",
+    "morgan": "~1.9.1",
+    "properties-reader": "^2.2.0",
+    "pug": "2.0.0-beta11",
+    "querystring": "^0.2.1",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "bulma": "^0.9.3",
+    "node-sass": "^6.0.1"
+  }
+}

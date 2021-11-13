@@ -1,0 +1,45 @@
+doctype html
+html(lang='en')
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="icon", href="/images/favicon/favicon.ico")
+    meta(charset='utf-8')
+    meta(name="robots", content="index,follow")
+    meta(name="googlebot", content="index,follow")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(http-equiv="x-ua-compatible", content="IE=edge")
+    meta(property="og:title", content=title)
+    meta(property="og:description", content=description)
+    meta(property="og:type", content="website")
+    meta(property="og:url", content="https://davidbertoldi.dev")
+    meta(property="og:image", content="https://davidbertoldi.dev/images/profile.jpg")
+    meta(name="description", content=description)
+    //base(href="https://davidbertoldi.dev")
+
+  body(class='main')
+    block content
+
+    footer(class='footer has-background-white')
+      div(class='content has-text-centered')
+        p(class='block') Copyright &copy; #{year} - David Bertoldi
+
+        a(href='https://github.com/firaja', target='blank', class='mx-2')
+          span(class='icon is-size-4')
+            i(class="fa-brands fa-github")
+
+        a(href='https://www.linkedin.com/in/david-bertoldi', target='blank', class='mx-2')
+          span(class='icon is-size-4')
+            i(class="fa-brands fa-linkedin")
+
+        a(href='https://medium.com/@david.bertoldi', target='blank', class='mx-2')
+          span(class='icon is-size-4')
+            i(class="fa-brands fa-medium")
+
+        a(href='https://www.instagram.com/davidbertoldi_', target='blank', class='mx-2')
+          span(class='icon is-size-4')
+            i(class="fa-brands fa-instagram")
+
+        a(href='https://www.facebook.com/david.bertoldi', target='blank', class='mx-2')
+          span(class='icon is-size-4')
+            i(class="fa-brands fa-facebook")
