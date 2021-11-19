@@ -1,17 +1,137 @@
 extends layout
 
 block content
-  section(class='section')
-    div(class="container")
-      div(class="media")
-        figure(class="media-left is-hidden-mobile")
-          p(class="image is-64x64")
-            img(src="images/logo.png")
-        div(class="media-content")
-          div(class="content")
-            h1(class='title has-text-weight-light	is-size-1') David Bertoldi
-            h2(class='subtitle has-text-weight-normal	is-size-3') Technical Architect
+  section(class='hero is-fullheight')
+    nav(class="navbar")
+      div(class='container')
+        div(id='navMenu', class='navbar-menu')
+          div(class='navbar-start')
+            span(class='navbar-item mt-6')
+              div(class="media")
+                figure(class="media-left is-hidden-mobile")
+                  p(class="image is-64x64")
+                    img(src="images/logo.png", alt='David Bertoldi logo')
+                div(class="media-content")
+                  div(class="content")
+                    h1(class='title has-text-weight-light	is-size-1') David Bertoldi
+                    h2(class='subtitle has-text-weight-normal	is-size-3') Technical Architect
 
-  section(class='section')
-    div(class='container is-size-4')
-      p I'm a passionate developer.
+
+    div(class='hero-body')
+      div(class='container is-size-5')
+        div(class='columns')
+          div(class='column')
+            figure(class='image profile m-auto')
+              img(class='is-rounded profile', src="images/profile.jpg", alt='David Bertoldi')
+          div(clas='column')
+            div(class='content px-6')
+              p I’m a passionate Computer Scientist from Milan, Italy and creator of 
+                a(href='https://password4j.com', target='blank', aria-label='Go to Password4j official website', title='Go to Password4j official website') Password4j
+                | .
+              p I started working as Software Engineer while studying for my Master Degree, focusing on 
+                strong(class='no-wrap has-text-weight-medium') Software Architecture
+                | , 
+                strong(class='no-wrap has-text-weight-medium') Deep Learning
+                | , 
+                strong(class='no-wrap has-text-weight-medium') Cloud Computing 
+                | and 
+                strong(class='no-wrap has-text-weight-medium') 
+                  a(href='https://github.com/firaja/Parallel-FloydWarshall/blob/master/report/report.pdf', target='blank', aria-label='Go to my last paper on Parallel Computing', title='Go to my last paper on Parallel Computing') Parallel Computing
+                | .
+              p I have 6+ years of experience as Technical Leader on large Ecommerce projects using 
+                strong(class='no-wrap has-text-weight-medium') 
+                  a(href='https://www.sap.com/products/commerce-cloud.html', target='blank') SAP Hybris/Commerce Cloud
+                |  and 
+                strong(class='no-wrap has-text-weight-medium') 
+                  a(href='https://www.salesforce.com/eu/products/commerce-cloud/ecommerce/', target='blank') Salesforce Commerce Cloud
+                |  technologies and 10+ years of experience on developing with 
+                strong(class='has-text-weight-medium') Java
+                | , the 
+                strong(class='has-text-weight-medium') Spring Framework
+                | , 
+                strong(class='has-text-weight-medium') Node.js 
+                | and 
+                strong(class='has-text-weight-medium') Python
+                | .
+                | In the free time I write 
+                strong(class='no-wrap has-text-weight-medium') 
+                  a(href='https://davidbertoldi.medium.com/', target='blank', aria-label='Go to my articles',  title='Go to my articles') technical articles 
+                | for Towards Data Science.
+              p Currently I'm working at Salesforce as 
+                strong(class='no-wrap has-text-weight-medium') Technical Architect 
+                | for the EMEA team, contributing to cutting-edge projects for large-scale businesses.
+              p Here you can find my 
+                a(href='resume.pdf', target='blank', aria-label='Go to my resume', title='Go to my resume') resume
+                | .
+
+
+
+
+
+
+  section(class='hero is-customheight')
+    div(class='hero-body')
+      div(class='container is-size-5 my-works')
+        div(class='columns')
+          div(class='column')
+            a(href='https://towardsdatascience.com/how-to-get-an-unbiased-rng-from-an-unbalanced-one-dbb44850e5f7?sk=804ba1da9195dae34fb91f4c74d3d9ec', target='blank')
+              article(class='card')
+                div(class='card-image')
+                  figure(class='image')
+                    img(src='images/article-1.jpg', alt='Unbiased RNG from an unbalanced one')
+                div(class='card-content')
+                  div(class='content')
+                    h2(class='is-size-4') How to get an unbiased RNG from an unbalanced one
+                    p(class='is-size-5') A randomness extractor in Python applicable from skewed coins to Shakespeare
+          div(class='column')
+            a(href='https://towardsdatascience.com/storing-a-movie-into-%CF%80-960ffcab4eed?sk=01115dfb09069c2c5e457917364c59fa', target='blank')
+              article(class='card')
+                div(class='card-image')
+                  figure(class='image')
+                    img(src='images/article-2.jpg', alt='Storing a movie into pi')
+                div(class='card-content')
+                  div(class='content')
+                    h2(class='is-size-4') Storing a movie into π
+                    p(class='is-size-5') Is it worth to use π as data archive?
+          div(class='column')
+            a(href='https://towardsdatascience.com/building-a-pseudorandom-number-generator-9bc37d3a87d5?sk=4bb5d36ec6515f76304b3fada0be8fe7', target='blank')
+              article(class='card')
+                div(class='card-image')
+                  figure(class='image')
+                    img(src='images/article-3.jpg', alt='Pseudorandom Number Generator')
+                div(class='card-content')
+                  div(class='content')
+                    h2(class='is-size-4') Building a Pseudorandom Number Generator
+                    p(class='is-size-5') In less of 50 lines of Python code
+        div(class='columns')
+          div(class='column')
+            a(href='https://towardsdatascience.com/how-to-write-your-first-quine-program-947f2b7e4a6f?sk=35de528876c9a3c6f962d1f32c053cfa', target='blank')
+              article(class='card')
+                div(class='card-image')
+                  figure(class='image')
+                    img(src='images/article-4.jpg', alt='Quine program')
+                div(class='card-content')
+                  div(class='content')
+                    h2(class='is-size-4') How to write your first Quine program
+                    p(class='is-size-5') A quick guide to self replicating programs in Python
+          div(class='column')
+            a(href='https://towardsdatascience.com/10-things-youre-doing-wrong-in-java-7608e2f050c7?sk=ba967b9191e89a719c4cf07e94de6669', target='blank')
+              article(class='card')
+                div(class='card-image')
+                  figure(class='image')
+                    img(src='images/article-5.jpg', alt='Things you are doing wrong in Java')
+                div(class='card-content')
+                  div(class='content')
+                    h2(class='is-size-4') 10 things you are doing wrong in Java
+                    p(class='is-size-5') The most common mistakes Java developers make
+
+          div(class='column')
+            a(href='https://password4j.com', target='blank')
+              article(class='card')
+                div(class='card-image')
+                  figure(class='image')
+                    img(src='images/article-6.jpg', alt='Password4j')
+                div(class='card-content')
+                  div(class='content')
+                    h2(class='is-size-4') Password4j
+                    p(class='is-size-5') A user-friendly cryptographic library that supports Argon2, Bcrypt, Scrypt, PBKDF2 and various cryptographic hash functions.
