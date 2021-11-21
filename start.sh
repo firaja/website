@@ -1,1 +1,1 @@
-pm2 start website -- run start --
+pm2 start npm -- run start --
