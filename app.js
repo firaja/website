@@ -5,7 +5,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 
 var app = express();
 
@@ -20,11 +19,22 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  next(createError(404));
+  res.status(404);
+  let bits = '';
+  const probability = Math.random();
+  const entropy = Math.round(- (probability * Math.log2(probability) + (1 - probability) * Math.log2(1 - probability))* 100) / 100;
+  for (i = 0; i < 1024; i++) {
+    bits += Math.random() < probability ? '1 ' : '0 ';
+  }
+  res.render('404',  {
+    title: '404 :(',
+    year: new Date().getFullYear(),
+    entropy: entropy,
+    bits: bits
+});
 });
 
 // error handler
