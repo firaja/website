@@ -19,7 +19,7 @@
     "md5": "^2.3.0",
     "morgan": "~1.9.1",
     "properties-reader": "^2.2.0",
-    "pug": "2.0.0-beta11",
+    "pug": "3.0.2",
     "querystring": "^0.2.1",
     "request": "^2.88.2"
   },
